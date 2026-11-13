@@ -75,8 +75,8 @@ button,a.btn{transition:transform .18s ease,box-shadow .3s ease,background-color
 <footer class="bg-jet pt-14 pb-28 sm:pb-32"><div class="max-w-6xl mx-auto px-4 grid sm:grid-cols-3 gap-10">
 <div>
   <div data-testid="footer-brand">
-    <div id="footer-logo-img-wrap" class="h-16 w-48 overflow-hidden flex items-center -ml-2">
-      <img id="footer-logo-img" src="https://i.ibb.co/B10Cr0P/IMG-20261113-173627-831.png" alt="APEX Detailing Studio" class="w-full h-full object-cover scale-[1.35] origin-left mix-blend-lighten">
+    <div id="footer-logo-img-wrap" class="flex items-center -ml-7">
+      <img id="footer-logo-img" src="https://i.ibb.co/B10Cr0P/IMG-20261113-173627-831.png" alt="APEX Detailing Studio" class="h-16 w-auto object-contain mix-blend-lighten">
     </div>
     <div id="footer-logo-custom" class="hidden flex-col leading-none">
       <span id="footer-brand-name" class="font-head italic font-700 text-2xl tracking-[.14em] text-white uppercase">APEX</span>
@@ -139,10 +139,10 @@ const CONFIG={
  {label:"Faded / Oxidised Paint",service:"ceramic",msg:"Cut back to depth, sealed under 10H Graphene & Ceramic Shield — glowing above."},
  {label:"Cabin Noise & Stains",service:"interior",msg:"Acoustic Sound Damping & Interior Spa resets the cabin — glowing above."}],
  hotspots:[
- {id:"bumper",label:"Bumper",x:37,y:75,service:"ppf",desc:"Stone chips, scuffs and highway rash hit here first. Self-healing TPU PPF takes the impact instead of your paint.",meta:"TPU PPF · 10-YR WARRANTY · 2–3 DAYS"},
- {id:"hood",label:"Hood",x:48,y:63,service:"correction",desc:"The largest flat panel — swirls and water-spot etching show here under every streetlight. Multi-stage correction restores the mirror.",meta:"3-STAGE CORRECTION · 1–3 DAYS"},
- {id:"doors",label:"Doors",x:66,y:63,service:"ceramic",desc:"Parking-lot dings and finger-nail scratches. A 10H graphene-ceramic shield hardens and glosses every door skin.",meta:"10H GRAPHENE · 5-YR WARRANTY"},
- {id:"cabin",label:"Cabin",x:60,y:55,service:"interior",desc:"Road noise, dust and spilled coffee. Acoustic damping plus a steam interior spa makes it feel factory-fresh.",meta:"DAMPING + SPA · 1–2 DAYS"}],
+ {id:"bumper",label:"Bumper",x:37,y:78,service:"ppf",desc:"Stone chips, scuffs and highway rash hit here first. Self-healing TPU PPF takes the impact instead of your paint.",meta:"TPU PPF · 10-YR WARRANTY · 2–3 DAYS"},
+ {id:"hood",label:"Hood",x:48,y:67,service:"correction",desc:"The largest flat panel — swirls and water-spot etching show here under every streetlight. Multi-stage correction restores the mirror.",meta:"3-STAGE CORRECTION · 1–3 DAYS"},
+ {id:"doors",label:"Doors",x:66,y:68,service:"ceramic",desc:"Parking-lot dings and finger-nail scratches. A 10H graphene-ceramic shield hardens and glosses every door skin.",meta:"10H GRAPHENE · 5-YR WARRANTY"},
+ {id:"cabin",label:"Cabin",x:60,y:58,service:"interior",desc:"Road noise, dust and spilled coffee. Acoustic damping plus a steam interior spa makes it feel factory-fresh.",meta:"DAMPING + SPA · 1–2 DAYS"}],
  gallery:["https://i.ibb.co/VcNW5nR3/41242-clean.png","https://i.ibb.co/C3xzrnwN/41235-clean.png","https://i.ibb.co/XrSnXxQ5/41238-clean.png","https://i.ibb.co/VWvLLb6f/41236-clean-1.png","https://i.ibb.co/3y4RkhXs/41237-clean.png","https://i.ibb.co/DHMJjbxK/41239-clean.png"]
 };
 
@@ -173,8 +173,7 @@ $("#footer-desc").textContent = customCity
   : "Mirror-gloss luxury car detailing studio. Paint protection film, ceramic coating, correction & interior spa — done right, or redone free.";
 $("#footer-copy").textContent = `© ${new Date().getFullYear()} ${STUDIO_FULL}${customCity ? `, ${customCity}` : ""}. All rights reserved.`;
 
-// Dark-mode Google Map centered cleanly without competitor pins
-const mapQueryText = customStudio && customCity ? `${customStudio} ${customCity}` : customCity ? customCity : "Worli Sea Face Mumbai";
+const mapQueryText = customStudio && customCity ? `${customStudio} ${customCity}` : customCity ? customCity : "Marine Drive Mumbai";
 const encodedMapQuery = encodeURIComponent(mapQueryText);
 $("#footer-map-frame").src = `https://maps.google.com/maps?q=${encodedMapQuery}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
 $("#footer-map-link").href = `https://www.google.com/maps/search/?api=1&query=${encodedMapQuery}`;
