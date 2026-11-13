@@ -32,7 +32,7 @@ button,a.btn{transition:transform .18s ease,box-shadow .3s ease,background-color
 <body class="antialiased">
 <header class="fixed top-0 inset-x-0 z-40 bg-jet/90 backdrop-blur-md border-b border-white/5"><div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between" data-testid="top-bar">
 <a href="#hero" class="flex items-center" data-testid="brand-logo">
-  <img id="nav-logo-img" src="https://i.ibb.co/qYRLxN7n/IMG-20261113-174327-498.png" alt="APEX Detailing Studio" class="h-10 sm:h-11 w-auto object-contain mix-blend-lighten">
+  <img id="nav-logo-img" src="https://i.ibb.co/B10Cr0P/IMG-20261113-173627-831.png" alt="APEX Detailing Studio" class="h-11 sm:h-12 w-auto object-contain mix-blend-lighten -ml-3 sm:-ml-4">
   <span id="nav-logo-custom" class="hidden flex-col leading-none">
     <span id="brand-name-nav" class="font-head italic font-700 text-xl tracking-[.14em] text-white">APEX</span>
     <span id="brand-sub-nav" class="font-head text-[9px] font-600 tracking-[.34em] text-crimson uppercase mt-0.5">DETAILING STUDIO</span>
@@ -75,7 +75,7 @@ button,a.btn{transition:transform .18s ease,box-shadow .3s ease,background-color
 <footer class="bg-jet pt-14 pb-28 sm:pb-32"><div class="max-w-6xl mx-auto px-4 grid sm:grid-cols-3 gap-10">
 <div>
   <div data-testid="footer-brand">
-    <img id="footer-logo-img" src="https://i.ibb.co/qYRLxN7n/IMG-20261113-174327-498.png" alt="APEX Detailing Studio" class="h-14 w-auto object-contain mix-blend-lighten">
+    <img id="footer-logo-img" src="https://i.ibb.co/B10Cr0P/IMG-20261113-173627-831.png" alt="APEX Detailing Studio" class="h-14 w-auto object-contain mix-blend-lighten">
     <div id="footer-logo-custom" class="hidden flex-col leading-none">
       <span id="footer-brand-name" class="font-head italic font-700 text-2xl tracking-[.14em] text-white uppercase">APEX</span>
       <span id="footer-brand-sub" class="font-head text-[10px] font-600 tracking-[.34em] text-crimson uppercase mt-1">DETAILING STUDIO</span>
@@ -171,7 +171,6 @@ $("#footer-desc").textContent = customCity
   : "Mirror-gloss luxury car detailing studio. Paint protection film, ceramic coating, correction & interior spa — done right, or redone free.";
 $("#footer-copy").textContent = `© ${new Date().getFullYear()} ${STUDIO_FULL}${customCity ? `, ${customCity}` : ""}. All rights reserved.`;
 
-// Normal Interactive Google Map
 const mapQueryText = customStudio && customCity ? `${customStudio} ${customCity}` : customCity ? customCity : "Car Detailing Studio";
 const encodedMapQuery = encodeURIComponent(mapQueryText);
 $("#footer-map-frame").src = `https://maps.google.com/maps?q=${encodedMapQuery}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
